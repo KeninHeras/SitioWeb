@@ -10,11 +10,18 @@ body {
   position: relative;
   width: 100%;
   height: 100vh; /* Ocupa toda la altura de la ventana */
+  min-height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   color: white;
+}
+/* Solución adicional para iOS y algunos dispositivos móviles */
+@supports (-webkit-touch-callout: none) {
+  .presentation {
+    height: calc(var(--vh, 1vh) * 100); /* Altura adaptativa */
+  }
 }
 
 /* Fondo de la sección */
