@@ -1,79 +1,68 @@
-/* Estilos generales */
-body {
+/* General */
+body, html {
   margin: 0;
-  font-family: Arial, sans-serif;
+  padding: 0;
   box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
 
-/* Sección de presentación */
-.presentation {
+/* Hero Section */
+.hero {
   position: relative;
-  width: 100%;
   height: 100vh; /* Ocupa toda la altura de la ventana */
-  min-height: 100%;
+  background-image: url(sansana.png); /* Reemplaza con tu imagen */
+  background-size: cover; /* La imagen cubre toda la sección */
+  background-position: center; /* Centra la imagen */
   display: flex;
-  justify-content: center;
   align-items: center;
-  overflow: hidden;
+  justify-content: center;
+  text-align: center;
   color: white;
 }
-/* Solución adicional para iOS y algunos dispositivos móviles */
-@supports (-webkit-touch-callout: none) {
-  .presentation {
-    height: calc(var(--vh, 1vh) * 100); /* Altura adaptativa */
-  }
+
+/* Overlay */
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.5); /* Crea un efecto de superposición oscura */
+  padding: 0.5rem;
+  border-radius: 10px;
+  margin-top: 250px;
+  width: 25%;
+  max-width: 900px; /* Ancho máximo para pantallas grandes */
 }
 
-/* Fondo de la sección */
-.background img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ajusta la imagen para que cubra toda el área */
-  z-index: -1; /* Coloca la imagen detrás del contenido */
-}
-
-/* Contenido de la sección */
-.content {
-  text-align: center;
-  z-index: 1; /* Asegura que el contenido esté por encima de la imagen */
-  padding: 0 1rem;
-}
-
-.content h1 {
+.hero-overlay h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  animation: fadeIn 1.5s ease-in-out;
+  animation: fadeInDown 1s ease-in-out;
 }
 
-.content p {
+.hero-overlay p {
   font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-  animation: fadeIn 2s ease-in-out;
+  margin-bottom: 3rem;
+  animation: fadeInUp 1s ease-in-out;
 }
 
-.content .btn-primary {
-  padding: 0.8rem 2rem;
-  background-color: #007BFF;
+/* Botón */
+.btn-primary {
+  padding: 1rem 2rem;
+  font-size: 5rem;
   color: white;
-  font-size: 1.2rem;
+  background-color: #007BFF;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-decoration: none;
-  border-radius: 4px;
+  margin-bottom: -350px;
+  border-radius: 5px;
+  margin-left: 150px;
   transition: background-color 0.3s ease;
-  animation: fadeIn 2.5s ease-in-out;
-  margin-top: 25rem;
+  animation: fadeInUp 1.2s ease-in-out;
 }
 
-.content .btn-primary:hover {
+.btn-primary:hover {
   background-color: #0056b3;
 }
 
-/* Animación de aparición */
-@keyframes fadeIn {
+/* Animaciones */
+@keyframes fadeInDown {
   from {
     opacity: 0;
     transform: translateY(-20px);
@@ -84,129 +73,31 @@ body {
   }
 }
 
-/* Diseño responsivo */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsivo */
 @media (max-width: 768px) {
-  .content h1 {
+  .hero-overlay h1 {
     font-size: 2.5rem;
   }
-  .content p {
+  .hero-overlay p {
     font-size: 1.2rem;
   }
-  .content .btn-primary {
+  .btn-primary {
     font-size: 1rem;
     padding: 0.6rem 1.5rem;
   }
 }
 
-/* General */
-/* Sección de Bienvenida */
-.welcome {
-  position: relative;
-  width: 100%;
-  height: 100vh; /* Esto hará que la sección ocupe todo el alto de la ventana del navegador */
-  overflow: hidden;
-}
-
-/* Fondo de la sección */
-.welcome-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* Coloca la imagen detrás del contenido */
-}
-
-.welcome-background img {
-  width: 100%; /* La imagen cubrirá todo el ancho */
-  height: 100%; /* La imagen cubrirá todo el alto */
-  object-fit: cover; /* Hace que la imagen cubra todo el área sin distorsionarse */
-  object-position: center center; /* Centra la imagen */
-}
-
-/* Contenido de la bienvenida */
-.welcome-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Centra el contenido */
-  text-align: center;
-  color: #fff; /* Color blanco para el texto */
-}
-
-.welcome-content h1 {
-  font-size: 3rem; /* Tamaño grande para el título */
-  margin-bottom: 1rem;
-}
-
-.welcome-content p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-}
-
-.welcome-content .btn-primary {
-  padding: 0.8rem 2rem;
-  background-color: #007BFF;
-  color: white;
-  font-size: 1.2rem;
-  text-decoration: none;
-  border-radius: 4px;
-}
-
-.welcome-content .btn-primary:hover {
-  background-color: #0056b3;
-}
-
-  
-  
-  .welcome-text {
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .welcome h1 {
-    font-size: 3rem;
-    line-height: 1.2;
-    margin-bottom: 20px;
-  }
-  
-  .welcome .highlight {
-    color: #007BFF; /* Color destacado */
-  }
-  
-  .welcome p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    margin-bottom: 30px;
-  }
-  
-  .btn-primary {
-    display: inline-block;
-    padding: 12px 25px;
-    font-size: 1rem;
-    color: #007BFF;
-    background-color: #fff;
-    text-transform: uppercase;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn-primary:hover {
-    background-color: #007BFF;
-  }
-  
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-color: #f5f5f5;
-    color: #333;
-  }
   /* Reset básico */
 * {
     margin: 0;
@@ -284,7 +175,7 @@ body {
   }
   
   .hero-overlay .btn-primary {
-    background: #ff7f50;
+    background: #007BFF;
     color: white;
     padding: 0.75rem 1.5rem;
     text-decoration: none;
@@ -294,7 +185,7 @@ body {
   }
   
   .hero-overlay .btn-primary:hover {
-    background: #ff4500;
+    background: #007BFF;
   }
   
   .content-section {
@@ -871,6 +762,7 @@ body {
     transform: translateY(0);
     position: relative;
     overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
   .service-card:hover {
@@ -883,6 +775,7 @@ body {
     color: #0077ff;
     margin-bottom: 1.5rem;
     transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
   .service-card:hover .service-icon {
@@ -1002,7 +895,7 @@ body {
   background-color: #0077ff;
   color: #fff;
   padding: 2rem 1rem;
-}
+  margin-top: 350px;}
 
 .footer-container {
   display: flex;
@@ -1246,6 +1139,7 @@ button[type="submit"] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  margin-right: 200px;
   transition: background-color 0.3s ease;
 }
 
