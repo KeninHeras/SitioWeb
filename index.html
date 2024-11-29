@@ -15,20 +15,21 @@
       <a href="#welcome">Inicio</a>
       <a href="#services">Servicios</a>
       <a href="#catalog">Catálogo</a>
-      <a href="#contact">Contacto</a>
+      <a href="#footer">Contacto</a>
     </nav>
   </header>
 
   <!-- Sección de Bienvenida -->
 <section id="welcome" class="welcome">
-    <div class="welcome-container">
-      <!-- Imagen de fondo o ilustración -->
-      <div class="welcome-background">
-        <img src="sansana.png" alt="Bienvenido a SANA SANA">
-      </div>
-        <a href="#services" class="btn-primary">Descubre nuestros servicios</a>
-      </div>
+  <div class="welcome-background">
+    <img src="sansana.png" alt="Fondo">
+    <div class="welcome-content">
+      <h1>Bienvenido a SANA SANA</h1>
+      <p>Brindamos soluciones integrales para farmacias y boticas.</p>
+      <a href="#services" class="btn-primary">Conoce más</a>
     </div>
+  </div>
+  
   </section>  
 
 <!-- Servicios -->
@@ -41,6 +42,13 @@
         <h3>Asesoría Farmacéutica</h3>
         <p>Te acompañamos en el proceso de apertura, desde la planificación hasta la puesta en marcha.</p>
         <a href="asesoria-farmaceutica.html" class="btn-secondary">Leer más</a>
+      </div>
+       <!-- Servicio 3: ¿Quienes Somos? -->
+       <div class="service-card">
+        <i class="fas fa-couch service-icon"></i>
+        <h3>Mision y Vision</h3>
+        <p>Conoce más acerca de nosotros.</p>
+        <a href="mision-vision.html" class="btn-secondary">Leer más</a>
       </div>
       <!-- Servicio 2: Muebles de Melamina -->
       <div class="service-card">
@@ -124,39 +132,92 @@
       </div>
     </div>
   </section>
+  <a href="https://wa.me/+51907826118" target="_blank" class="btn-whatsapp-float">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
+  
 
 <!-- Footer -->
-<footer class="footer">
+<section id="footer" class="footer">
     <div class="footer-container">
       <!-- Información de la empresa -->
-      <div class="footer-info">
-        <h3>Contacta con Nosotros</h3>
-        <p>Brindamos soluciones integrales para farmacias y boticas. Si tienes alguna consulta, no dudes en ponerte en contacto con nosotros.</p>
-        <ul class="social-links">
-          <li><a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a></li>
-          <li><a href="#" class="social-icon"><i class="fab fa-twitter"></i></a></li>
-          <li><a href="#" class="social-icon"><i class="fab fa-instagram"></i></a></li>
-          <li><a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a></li>
-        </ul>
-      </div>
-  
-      <!-- Formulario de contacto -->
-      <div class="footer-contact">
-        <h3>Envíanos un Mensaje</h3>
-        <form action="submit_form.php" method="POST" class="contact-form">
-          <input type="text" name="name" placeholder="Tu Nombre" required>
-          <input type="email" name="email" placeholder="Tu Correo Electrónico" required>
-          <textarea name="message" placeholder="Tu Mensaje" required></textarea>
-          <button type="submit" class="btn-primary">Enviar</button>
-        </form>
-      </div>
-    </div>
-    
-    <div class="footer-bottom">
-      <p>&copy; 2024 SANA SANA. Todos los derechos reservados.</p>
-    </div>
-  </footer>
-  
-
-</body>
-</html>
+      <!DOCTYPE html>
+      <html lang="es">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario de Contacto</title>
+        <link rel="stylesheet" href="styles.css">
+      </head>
+      <body>
+        <!-- Formulario de Contacto -->
+        <section class="contact-form-section">
+          <div class="form-container">
+            <h2>Contáctanos</h2>
+            <p>Si tienes alguna pregunta o consulta, llena el formulario y nos pondremos en contacto contigo.</p>
+            
+            <form action="send_email.php" method="POST" class="contact-form">
+              <!-- Nombre -->
+              <label for="name">Nombre</label>
+              <input type="text" id="name" name="name" placeholder="Escribe tu nombre" required>
+              
+              <!-- Correo Electrónico -->
+              <label for="email">Correo Electrónico</label>
+              <input type="email" id="email" name="email" placeholder="Escribe tu correo electrónico" required>
+              
+              <!-- Mensaje -->
+              <label for="message">Mensaje</label>
+              <textarea id="message" name="message" placeholder="Escribe tu mensaje" required></textarea>
+              
+              <!-- Políticas de Privacidad -->
+              <div class="checkbox-container">
+                <input type="checkbox" id="privacy-policy" name="privacy-policy" required>
+                <label for="privacy-policy">Acepto la <a href="#">política de privacidad</a></label>
+              </div>
+              
+              <!-- Términos y Condiciones -->
+              <div class="checkbox-container">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">Acepto los <a href="#">términos y condiciones</a></label>
+              </div>
+              
+              <!-- Botón de Enviar -->
+              <button type="submit" class="btn-submit">Enviar Mensaje</button>
+            </form>
+          </div>
+        </section>
+      
+        <!-- Footer -->
+        <footer class="footer">
+          <div class="footer-container">
+            <div class="footer-section">
+              <h3>Contacto</h3>
+              <p><strong>Teléfono:</strong> +51 907 826 118</p>
+              <p><strong>Correo:</strong> corpsanasana@gmail.com</p>
+              <p><strong>Dirección:</strong> Piura_Sullana, Perú</p>
+            </div>
+            <div class="footer-section">
+              <h3>Enlaces Rápidos</h3>
+              <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="asesoria-farmaceutica.html">Asesoría Farmacéutica</a></li>
+                <li><a href="muebles-melamina.html">Muebles de Melamina</a></li>
+                <li><a href="venta-implementos.html">Venta de Implementos</a></li>
+              </ul>
+            </div>
+            <div class="footer-section">
+              <h3>Síguenos</h3>
+              <div class="social-icons">
+                <a href="#"><img src="fb.png" alt="Facebook"></a>
+                <a href="#"><img src="x.jpg" alt="Twitter"></a>
+                <a href="#"><img src="ig.png" alt="Instagram"></a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2024 SANA SANA. Todos los derechos reservados.</p>
+          </div>
+        </footer>
+      </body>
+      </html>
+      

@@ -12,16 +12,35 @@
     overflow: hidden;
   }
   
+  .welcome-background {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* La altura ocupará todo el viewport */
+    overflow: hidden;
+  }
+  
   .welcome-background img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    filter: brightness(100%);
+    object-fit: cover; /* Mantiene el aspecto de la imagen al cubrir el contenedor */
+    filter: brightness(100%); /* Puedes ajustar la luminosidad si es necesario */
     z-index: 1;
   }
+  
+  /* Ajustes para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .welcome-background {
+      height: 60vh; /* Reduce la altura en dispositivos pequeños */
+    }
+  
+    .welcome-background img {
+      object-fit: cover; /* Asegura que la imagen siga siendo proporcional */
+    }
+  }
+  
   
   .welcome-text {
     position: relative;
@@ -798,125 +817,254 @@ body {
     animation: fadeInUp 0.6s ease-in-out;
   }
   
-  /* Footer */
+
+  /* General */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #f5f5f5;
+}
+
+/* Sección de Formulario */
+.contact-form-section {
+  align-items: center;
+  padding: 2rem;
+  background-color: #0077ff;
+  color: #fff;
+  text-align: center;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #0077ff;
+}
+
+.contact-form label {
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+  border: 1px solid #0077ff;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 120px;
+}
+
+.contact-form .btn-submit {
+  background-color: #0077ff;
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form .btn-submit:hover {
+  background-color: #0077ff;
+}
+
+/* Footer */
 .footer {
-    background-color: #0077ff;
-    color: #fff;
-    padding: 4rem 2rem;
-    text-align: center;
-    font-family: 'Arial', sans-serif;
-    position: relative;
-    overflow: hidden;
+  align-items: center;
+  background-color: #0077ff;
+  color: #fff;
+  padding: 2rem 1rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+}
+
+.footer-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 0.5rem 0;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-icons img {
+  margin-right: 0.5rem;
+  width: 34px;
+  height: 34px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  text-align: center;
+  color: #fff;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+/* Carrusel */
+.carousel-section {
+  padding: 3rem 1.5rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.carousel-item {
+  display: none;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.carousel-item.active {
+  display: block;
+}
+
+.carousel-controls {
+  margin-top: 1rem;
+}
+
+.carousel-prev, .carousel-next {
+  background-color: #0077ff;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-prev:hover, .carousel-next:hover {
+  background-color: #0077ff;
+}
+
+/* Información Adicional */
+.extra-info {
+  padding: 3rem 1.5rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.info-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.info-item {
+  flex: 1 1 200px;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(50%);
   }
-  
-  .footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
-  
-  .footer-info {
-    flex: 1;
-    margin-right: 2rem;
-  }
-  
-  .footer-info h3 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .footer-info p {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .social-links {
-    display: flex;
-    justify-content: left;
-    gap: 1rem;
-  }
-  
-  .social-icon {
-    color: #fff;
-    font-size: 1.5rem;
-    transition: color 0.3s ease;
-  }
-  
-  .social-icon:hover {
-    color: #0077ff;
-  }
-  
-  .footer-contact {
-    flex: 1;
-  }
-  
-  .footer-contact h3 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
-    padding: 1rem;
-    font-size: 1rem;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    transition: all 0.3s ease;
-  }
-  
-  .contact-form input:focus,
-  .contact-form textarea:focus {
-    border-color: #0077ff;
-    outline: none;
-  }
-  
-  .contact-form button {
-    background-color: #0077ff;
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: 30px;
-    border: none;
-    font-size: 1.1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .contact-form button:hover {
-    background-color: #0077ff;
-  }
-  
-  .footer-bottom {
-    margin-top: 3rem;
-    font-size: 0.9rem;
-    color: #fff;
-    text-align: center;
-  }
-  
-  .footer-bottom p {
-    margin: 0;
-  }
-  
-  @media (max-width: 768px) {
-    .footer-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .footer-info {
-      margin-right: 0;
-      margin-bottom: 2rem;
-    }
-  }
-  
+}
+.btn-whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.btn-whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.btn-whatsapp-float img {
+  width: 30px;
+  height: 30px;
+}
