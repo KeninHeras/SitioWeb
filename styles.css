@@ -1,45 +1,62 @@
 /* General */
 /* Sección de Bienvenida */
 .welcome {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    color: #fff;
-    text-align: center;
-    background-color: #3c4f76;
-    overflow: hidden;
-  }
-  
-  .welcome-background {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* La altura ocupará todo el viewport */
-    overflow: hidden;
-  }
-  
-  .welcome-background img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Mantiene el aspecto de la imagen al cubrir el contenedor */
-    filter: brightness(100%); /* Puedes ajustar la luminosidad si es necesario */
-    z-index: 1;
-  }
-  
-  /* Ajustes para pantallas pequeñas */
-  @media (max-width: 768px) {
-    .welcome-background {
-      height: 60vh; /* Reduce la altura en dispositivos pequeños */
-    }
-  
-    .welcome-background img {
-      object-fit: cover; /* Asegura que la imagen siga siendo proporcional */
-    }
-  }
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Esto hará que la sección ocupe todo el alto de la ventana del navegador */
+  overflow: hidden;
+}
+
+/* Fondo de la sección */
+.welcome-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Coloca la imagen detrás del contenido */
+}
+
+.welcome-background img {
+  width: 100%; /* La imagen cubrirá todo el ancho */
+  height: 100%; /* La imagen cubrirá todo el alto */
+  object-fit: cover; /* Hace que la imagen cubra todo el área sin distorsionarse */
+  object-position: center center; /* Centra la imagen */
+}
+
+/* Contenido de la bienvenida */
+.welcome-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centra el contenido */
+  text-align: center;
+  color: #fff; /* Color blanco para el texto */
+}
+
+.welcome-content h1 {
+  font-size: 3rem; /* Tamaño grande para el título */
+  margin-bottom: 1rem;
+}
+
+.welcome-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.welcome-content .btn-primary {
+  padding: 0.8rem 2rem;
+  background-color: #007BFF;
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.welcome-content .btn-primary:hover {
+  background-color: #0056b3;
+}
+
   
   
   .welcome-text {
@@ -57,7 +74,7 @@
   }
   
   .welcome .highlight {
-    color: #ffc107; /* Color destacado */
+    color: #007BFF; /* Color destacado */
   }
   
   .welcome p {
@@ -70,8 +87,8 @@
     display: inline-block;
     padding: 12px 25px;
     font-size: 1rem;
-    color: #fff;
-    background-color: #ff5722;
+    color: #007BFF;
+    background-color: #fff;
     text-transform: uppercase;
     text-decoration: none;
     border-radius: 5px;
@@ -79,7 +96,7 @@
   }
   
   .btn-primary:hover {
-    background-color: #e64a19;
+    background-color: #007BFF;
   }
   
 body {
@@ -131,7 +148,7 @@ body {
   }
   
   header nav a:hover {
-    color: #ffdd57;
+    color: #57aeff;
   }
   
   .hero {
@@ -1067,4 +1084,71 @@ body {
 .btn-whatsapp-float img {
   width: 30px;
   height: 30px;
+}
+.contact {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact .section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.form-group input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+.form-group a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.form-group a:hover {
+  text-decoration: underline;
+}
+
+button[type="submit"] {
+  padding: 1rem 2rem;
+  background-color: #007BFF;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
 }
