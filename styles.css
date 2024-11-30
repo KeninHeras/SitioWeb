@@ -1144,7 +1144,7 @@ body {
 .contact {
   padding: 2rem;
   background-color: #f9f9f9;
-  max-width: 800px;
+  max-width: 500px; /* Cambié de 700px a 500px para hacerlo más delgado */
   margin: 0 auto;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -1152,7 +1152,7 @@ body {
 
 .contact .section-title {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem; /* Ajusté el tamaño de la fuente */
   color: #333;
   margin-bottom: 1rem;
 }
@@ -1163,7 +1163,7 @@ body {
 }
 
 .form-group {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem; /* Reduje ligeramente el margen entre los campos */
 }
 
 .form-group label {
@@ -1202,7 +1202,7 @@ button[type="submit"] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  margin-right: 200px;
+  margin-top: 1rem; /* Añadí un margen superior para espaciar mejor el botón */
   transition: background-color 0.3s ease;
 }
 
