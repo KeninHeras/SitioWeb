@@ -1,20 +1,92 @@
 <!DOCTYPE html>
 <html lang="es">
-    <!-- Header -->
-    <header>
-      <div class="logo">SANA SANA</div>
-      <nav>
-        <a href="#welcome">Inicio</a>
-        <a href="#services">Servicios</a>
-        <a href="#catalog">Catálogo</a>
-        <a href="#footer">Contacto</a>
-      </nav>
-    </header>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SANA SANA</title>
-    <link rel="stylesheet" href="styles.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SANA SANA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+    /* Estilos del Header */
+    header {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: 500;
+    }
+    nav {
+      display: flex;
+    }
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    /* Menú para dispositivos móviles */
+    .menu-icon {
+      display: none;
+      cursor: pointer;
+      font-size: 30px;
+    }
+    /* Estilos para el menú en móvil */
+    @media screen and (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        padding: 20px;
+      }
+      nav a {
+        margin-left: 0;
+        margin-bottom: 15px;
+      }
+      .menu-icon {
+        display: block;
+      }
+      nav.show {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">SANA SANA</div>
+    <nav>
+      <a href="#index.html">Inicio</a>
+      <a href="#catalog">Catalogo</a>
+      <a href="#services">Servicios</a>
+      <a href="#contactForm">Contacto</a>
+    </nav>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('nav');
+      nav.classList.toggle('show');
+    }
+  </script>
 </head>
 <body>
     <header class="hero">
