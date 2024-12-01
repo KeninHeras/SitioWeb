@@ -13,18 +13,20 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Presentación con Imagen</title>
+    <title>SANA SANA</title>
     <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <!-- Sección de Presentación -->
-    <section id="presentation" class="presentation">
-      <div class="hero">
-        <img src="sansana.png" alt="Imagen de fondo de presentación">
-      </div>
-    </section>
-  </body>
-  </html>
+</head>
+<body>
+    <header class="hero">
+        <div class="overlay"></div>
+        <div class="contenido-hero">
+          <h1>Bienvenidos a <span></span></h1>
+            <p>Asesoría y soluciones integrales para farmacias y boticas.</p>
+            <a href="#services" class="boton">Descubre Más</a>
+        </div>
+    </header>
+</body>
+</html>
   
 <!-- Servicios -->
 <section id="services" class="services">
@@ -129,83 +131,81 @@
   <a href="https://wa.me/+51907826118" target="_blank" class="btn-whatsapp-float">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
   </a>
-<!-- Footer -->
-<section id="footer" class="footer">
-    <div class="footer-container">
-      <!-- Información de la empresa -->
-      <!DOCTYPE html>
-      <html lang="es">
-      <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Formulario de Contacto</title>
-        <link rel="stylesheet" href="styles.css">
-      </head>
-      <body>
-
-        <section id="contact" class="contact">
-          <h2 class="section-title">Contáctanos</h2>
-          <!-- Formulario de contacto -->
-          <form action="https://formsubmit.co/corpsanasana@gmail.com" method="POST" class="contact-form">
-            <div class="form-group">
-              <label for="name">Nombre</label>
-              <input type="text" id="name" name="name" required placeholder="Tu nombre">
-            </div>
-            
-            <div class="form-group">
-              <label for="email">Correo Electrónico</label>
-              <input type="email" id="email" name="email" required placeholder="Tu correo electrónico">
-            </div>
-            
-            <div class="form-group">
-              <label for="message">Mensaje</label>
-              <textarea id="message" name="message" rows="4" required placeholder="Escribe tu mensaje"></textarea>
-            </div>
-            
-            <div class="form-group">
-              <label>
-                <input type="checkbox" name="privacy-policy" required>
-                Acepto la <a href="#privacy-policy">Política de Privacidad</a> y los <a href="#terms-and-conditions">Términos y Condiciones</a>.
-              </label>
-            </div>
-            
-            <button type="submit" class="btn-primary">Enviar</button>
-            <input type="hidden" name="next" value="https://websitesecc.github.io/Corporacion-Sana-Sana/index.html">
-            <input type="hidden" name="_captcha" value="false">
-          </form>
-        </section>
-      
-        <!-- Footer -->
-        <footer class="footer">
-          <div class="footer-container">
-            <div class="footer-section">
-              <h3>Contacto</h3>
-              <p><strong>Teléfono:</strong> +51 907 826 118</p>
-              <p><strong>Correo:</strong> corpsanasana@gmail.com</p>
-              <p><strong>Dirección:</strong> Piura_Sullana, Perú</p>
-            </div>
-            <div class="footer-section">
-              <h3>Enlaces Rápidos</h3>
-              <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="asesoria-farmaceutica.html">Asesoría Farmacéutica</a></li>
-                <li><a href="muebles-melamina.html">Muebles de Melamina</a></li>
-                <li><a href="venta-implementos.html">Venta de Implementos</a></li>
-              </ul>
-            </div>
-            <div class="footer-section">
-              <h3>Síguenos</h3>
-              <div class="social-icons">
-                <a href="#"><img src="fb.png" alt="Facebook"></a>
-                <a href="#"><img src="x.jpg" alt="Twitter"></a>
-                <a href="#"><img src="ig.png" alt="Instagram"></a>
+  <!DOCTYPE html>
+  <html lang="es">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Formulario de Contacto</title>
+      <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+      <section class="formulario-contacto">
+          <h1>Contáctanos</h1>
+          <form id="contactForm" action="https://formsubmit.co/corpsanasana@gmail.com" method="POST">
+              <div class="campo">
+                  <label for="nombre">Nombre</label>
+                  <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
               </div>
-            </div>
+              <div class="campo">
+                  <label for="email">Correo Electrónico</label>
+                  <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+              </div>
+              <div class="campo">
+                  <label for="mensaje">Mensaje</label>
+                  <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje" required></textarea>
+              </div>
+              <button type="submit" class="boton">Enviar</button>
+              <input type="hidden" name="next" value="https://websitesecc.github.io/Corporacion-Sana-Sana/index.html">
+              <input type="hidden" name="_captcha" value="false">
+          </form>
+          <div id="mensaje-exito" class="mensaje-exito" style="display: none;">
+              ¡Formulario enviado con éxito! Te responderemos pronto.
           </div>
-          <div class="footer-bottom">
-            <p>&copy; 2024 SANA SANA. Todos los derechos reservados.</p>
+      </section>
+  
+      <footer>
+          <div class="footer-contenido">
+              <div class="informacion">
+                  <h3>SANA SANA</h3>
+                  <p>Dirección: Piura-Sullana, Bellavista</p>
+                  <p>Teléfono: +51 907 826 118</p>
+                  <p>Correo: corpsanasana@gmail.com</p>
+              </div>
+              
+              <!-- Sección de redes sociales -->
+              <div class="redes-sociales">
+                  <h4>Síguenos en:</h4>
+                  <div class="iconos-redes">
+                      <a href="https://facebook.com" target="_blank">
+                          <img src="fb.png" alt="Facebook" />
+                      </a>
+                      <a href="https://twitter.com" target="_blank">
+                          <img src="x.jpg" alt="Twitter" />
+                      </a>
+                      <a href="https://instagram.com" target="_blank">
+                          <img src="ig.png" alt="Instagram" />
+                      </a>
+                  </div>
+              </div>
+  
+              <!-- Sección de suscripción -->
+              <div class="suscripcion">
+                  <h4>Suscríbete a nuestro boletín</h4>
+                  <form action="#" method="post">
+                      <input type="email" placeholder="Tu correo" required>
+                      <button type="submit">Suscribirse</button>
+                  </form>
+              </div>
+  
+              <!-- Enlace al libro de reclamaciones -->
+              <div class="enlaces-footer">
+                  <a href="#" id="libro-reclamaciones">Libro de Reclamaciones</a>
+              </div>
           </div>
-        </footer>
-      </body>
-      </html>
-      
+      </footer>
+  
+      <script src="scripts.js"></script>
+  </body>
+  </html>
+  

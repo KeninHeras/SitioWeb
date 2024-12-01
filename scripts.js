@@ -21,3 +21,24 @@ nextButton.addEventListener('click', () => {
 
 // Mostrar el primer elemento al cargar
 showItem(currentIndex);
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+  e.preventDefault(); // Evitar recarga de la página
+  const form = e.target;
+
+  fetch(form.action, {
+      method: form.method,
+      body: new FormData(form),
+      headers: {
+          'Accept': 'application/json'
+      }
+  }).then(response => {
+      if (response.ok) {
+          document.getElementById('mensaje-exito').style.display = 'block';
+          form.reset(); // Limpia el formulario
+      } else {
+          alert('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.');
+      }
+  }).catch(error => {
+      alert('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.');
+  });
+});
