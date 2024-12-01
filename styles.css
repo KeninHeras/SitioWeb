@@ -1613,4 +1613,15 @@ footer {
   .redes-sociales .iconos-redes {
       flex-direction: column;
   }
-}
+
+<style>
+  .iconos-redes img {
+      width: 40px;
+      height: 40px;
+      margin: 5px;
+      transition: transform 0.3s;
+  }
+  .iconos-redes img:hover {
+      transform: scale(1.2);
+  }
+  

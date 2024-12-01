@@ -1,42 +1,181 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Misión y Visión | SANA SANA</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap">
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+    }
+    /* Header */
+    header {
+      background-color: #00b4d8;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 10;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: 500;
+    }
+    nav {
+      display: flex;
+    }
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    /* Menú desplegable en móvil */
+    .menu-icon {
+      display: none;
+      font-size: 30px;
+      cursor: pointer;
+    }
+    @media screen and (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #00b4d8;
+        padding: 20px;
+      }
+      nav a {
+        margin-left: 0;
+        margin-bottom: 15px;
+      }
+      .menu-icon {
+        display: block;
+      }
+      nav.show {
+        display: flex;
+      }
+    }
+    /* Hero Image */
+    .hero-image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    /* Carousel Section */
+    .carousel-section {
+      padding: 20px;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+    .carousel {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .carousel-item {
+      display: none;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .carousel-item.active {
+      display: block;
+    }
+    .carousel-controls {
+      margin-top: 10px;
+    }
+    .carousel-controls button {
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 10px;
+      margin: 0 5px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .carousel-controls button:hover {
+      background-color: #555;
+    }
+    /* Extra Info Section */
+    .extra-info {
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    .info-grid {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .info-item {
+      flex: 1 1 calc(33.333% - 20px);
+      text-align: center;
+      background: white;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    .info-item img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+    .btn-primary {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #00b4d8;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    footer {
+      background-color: #00b4d8;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
 </head>
 <body>
   <!-- Header -->
-  <header class="header">
+  <header>
     <div class="logo">SANA SANA</div>
     <nav>
       <a href="index.html">Inicio</a>
       <a href="asesoria-farmaceutica.html">Asesoría Farmacéutica</a>
       <a href="muebles-melamina.html">Muebles de Melamina</a>
-      <a href="#contact">Contacto</a>
     </nav>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
   </header>
 
   <!-- Hero Section -->
-    </div>
-    <img src="pq.jpg" alt="Misión y Visión">
-  </section>
+  <img src="pq.jpg" alt="Misión y Visión" class="hero-image">
 
   <!-- Carrusel de Misión y Visión -->
   <section class="carousel-section">
     <div class="carousel">
       <div class="carousel-item active">
         <h2>Misión</h2>
-        <p>
-          Brindar soluciones integrales para farmacias y boticas, garantizando calidad, innovación y confianza en cada paso del proceso, desde la planeación hasta la operación diaria.
-        </p>
+        <p>Brindar soluciones integrales para farmacias y boticas, garantizando calidad, innovación y confianza en cada paso del proceso, desde la planeación hasta la operación diaria.</p>
       </div>
       <div class="carousel-item">
         <h2>Visión</h2>
-        <p>
-          Convertirnos en líderes del sector farmacéutico en el país, siendo reconocidos por nuestro compromiso, tecnología de vanguardia y excelencia en el servicio.
-        </p>
+        <p>Convertirnos en líderes del sector farmacéutico en el país, siendo reconocidos por nuestro compromiso, tecnología de vanguardia y excelencia en el servicio.</p>
       </div>
       <div class="carousel-item">
         <h2>Valores</h2>
@@ -77,13 +216,37 @@
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-container">
-      <p>&copy; 2024 SANA SANA. Todos los derechos reservados.</p>
-      <p>corpsanasana@gmail.com | Teléfono: +51 907 826 118</p>
-    </div>
+  <footer>
+    <p>&copy; 2024 SANA SANA. Todos los derechos reservados.</p>
+    <p>corpsanasana@gmail.com | Teléfono: +51 907 826 118</p>
   </footer>
 
-  <script src="scripts.js"></script>
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('nav');
+      nav.classList.toggle('show');
+    }
+
+    const carouselItems = document.querySelectorAll('.carousel-item');
+    const prevButton = document.querySelector('.carousel-prev');
+    const nextButton = document.querySelector('.carousel-next');
+    let currentIndex = 0;
+
+    function updateCarousel(index) {
+      carouselItems.forEach((item, i) => {
+        item.classList.toggle('active', i === index);
+      });
+    }
+
+    prevButton.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+      updateCarousel(currentIndex);
+    });
+
+    nextButton.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % carouselItems.length;
+      updateCarousel(currentIndex);
+    });
+  </script>
 </body>
 </html>

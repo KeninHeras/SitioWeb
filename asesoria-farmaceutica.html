@@ -4,7 +4,117 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Asesoría Farmacéutica</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap">
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+    }
+    /* Header */
+    header {
+      background-color: #00b4d8;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 10;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: 500;
+    }
+    nav {
+      display: flex;
+    }
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    /* Menú desplegable en móvil */
+    .menu-icon {
+      display: none;
+      font-size: 30px;
+      cursor: pointer;
+    }
+    @media screen and (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #00b4d8;
+        padding: 20px;
+      }
+      nav a {
+        margin-left: 0;
+        margin-bottom: 15px;
+      }
+      .menu-icon {
+        display: block;
+      }
+      nav.show {
+        display: flex;
+      }
+    }
+    /* Hero Image */
+    .hero-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      position: relative;
+      z-index: 1;
+    }
+    /* Content Section */
+    .content-section {
+      padding: 20px;
+      background: #f9f9f9;
+    }
+    .info-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .info-item {
+      flex: 1 1 calc(33.333% - 20px);
+      background: white;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      text-align: center;
+    }
+    .info-item img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+    .btn-primary {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #00b4d8;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    footer {
+      background-color: #00b4d8;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -12,15 +122,14 @@
     <nav>
       <a href="index.html">Inicio</a>
       <a href="muebles-melamina.html">Muebles de Melamina</a>
-      <a href="index.html#contact">Contacto</a>
+      <a href="mision-vision.html">¿Por qué elegirnos?</a>
     </nav>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
   </header>
 
-    <img src="asesoria.jpg" alt="Asesoría Farmacéutica" class="hero-image">
-    </div>
-  </section>
+  <img src="asesoria.jpg" alt="Asesoría Farmacéutica" class="hero-image">
 
-  <section class="content-section fade-in">
+  <section class="content-section">
     <h2>Nuestros Servicios</h2>
     <div class="info-grid">
       <div class="info-item">
@@ -45,5 +154,12 @@
   <footer>
     <p>&copy; 2024 SANA SANA. Todos los derechos reservados.</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('nav');
+      nav.classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
