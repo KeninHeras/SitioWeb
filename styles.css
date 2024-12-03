@@ -239,7 +239,7 @@ body, html {
   padding: 1rem 2rem;
   font-size: 5rem;
   color: white;
-  background-color: #007BFF;
+  background-color: #00b4d8;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-decoration: none;
   margin-bottom: -350px;
@@ -250,7 +250,7 @@ body, html {
 }
 
 .btn-primary:hover {
-  background-color: #0056b3;
+  background-color: #00b4d8;
 }
 
 /* Animaciones */
@@ -305,7 +305,7 @@ body, html {
   }
   
   header {
-    background: linear-gradient(90deg, #0077ff, #00d4ff);
+    background: linear-gradient(90deg, #00b4d8, #00b4d8);
     color: white;
     padding: 1rem 2rem;
     display: flex;
@@ -331,7 +331,7 @@ body, html {
   }
   
   header nav a:hover {
-    color: #57aeff;
+    color: #00b4d8;
   }
   
   .hero {
@@ -367,7 +367,7 @@ body, html {
   }
   
   .hero-overlay .btn-primary {
-    background: #007BFF;
+    background: #00b4d8;
     color: white;
     padding: 0.75rem 1.5rem;
     text-decoration: none;
@@ -434,7 +434,7 @@ body, html {
   
   .btn-primary {
     display: inline-block;
-    background: #0077ff;
+    background: #00b4d8;
     color: white;
     padding: 0.75rem 1.5rem;
     border-radius: 5px;
@@ -445,7 +445,7 @@ body, html {
   }
   
   .btn-primary:hover {
-    background: #0056b3;
+    background: #00b4d8;
   }
   
   footer {
@@ -710,7 +710,7 @@ body, html {
   
   /* Footer */
   footer {
-    background-color: #145DA0;
+    background-color: #00b4d8;
     color: white;
     text-align: center;
     padding: 1.5rem 0;
@@ -725,7 +725,7 @@ body {
   }
   
   header {
-    background-color: #0077ff;
+    background-color: #00b4d8;
     color: white;
     padding: 1rem 2rem;
     display: flex;
@@ -789,7 +789,7 @@ body {
   }
   
   .btn-primary:hover {
-    background-color: #0056b3;
+    background-color: #00b4d8;
   }
   
   /* Content Section */
@@ -963,14 +963,14 @@ body {
   
   .service-card .service-icon {
     font-size: 4rem;
-    color: #0077ff;
+    color: #00b4d8;
     margin-bottom: 1.5rem;
     transition: all 0.3s ease-in-out;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
   .service-card:hover .service-icon {
-    color: #0077ff;
+    color: #00b4d8;
     transform: scale(1.1);
   }
   
@@ -990,7 +990,7 @@ body {
   .service-card a {
     font-size: 1rem;
     color: #fff;
-    background-color: #0077ff;
+    background-color: #00b4d8;
     padding: 0.75rem 2rem;
     border-radius: 30px;
     text-decoration: none;
@@ -999,7 +999,7 @@ body {
   }
   
   .service-card a:hover {
-    background-color: #0077ff;
+    background-color: #00b4d8;
   }
   
   /* Animación de aparición */
@@ -1032,7 +1032,7 @@ body {
 .contact-form-section {
   align-items: center;
   padding: 2rem;
-  background-color: #0077ff;
+  background-color: #00b4d8;
   color: #fff;
   text-align: center;
 }
@@ -1044,7 +1044,7 @@ body {
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  color: #0077ff;
+  color: #00b4d8;
 }
 
 .contact-form label {
@@ -1057,7 +1057,7 @@ body {
   padding: 1rem;
   margin: 0.5rem 0;
   border-radius: 8px;
-  border: 1px solid #0077ff;
+  border: 1px solid #00b4d8;
 }
 
 .contact-form textarea {
@@ -1066,7 +1066,7 @@ body {
 }
 
 .contact-form .btn-submit {
-  background-color: #0077ff;
+  background-color: #00b4d8;
   color: #fff;
   border: none;
   padding: 1rem;
@@ -1077,13 +1077,13 @@ body {
 }
 
 .contact-form .btn-submit:hover {
-  background-color: #0077ff;
+  background-color: #00b4d8;
 }
 
 /* Footer */
 .footer {
   align-items: center;
-  background-color: #0077ff;
+  background-color: #00b4d8;
   color: #fff;
   padding: 2rem 1rem;
   margin-top: 350px;}
@@ -1192,7 +1192,7 @@ body {
 }
 
 .carousel-prev, .carousel-next {
-  background-color: #0077ff;
+  background-color: #00b4d8;
   color: #fff;
   border: none;
   padding: 0.5rem 1rem;
@@ -1203,7 +1203,7 @@ body {
 }
 
 .carousel-prev:hover, .carousel-next:hover {
-  background-color: #0077ff;
+  background-color: #00b4d8;
 }
 
 /* Información Adicional */
@@ -1324,7 +1324,7 @@ body {
 
 button[type="submit"] {
   padding: 1rem 2rem;
-  background-color: #007BFF;
+  background-color: #00b4d8;
   color: white;
   font-size: 1rem;
   border: none;
@@ -1335,7 +1335,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #0056b3;
+  background-color: #00b4d8;
 }
 /* Reinicio de estilos */
 * {
@@ -1365,7 +1365,7 @@ body {
 .formulario-contacto h1 {
   text-align: center;
   margin-bottom: 20px;
-  color: #0077b6;
+  color: #00b4d8;
 }
 
 /* Campos del formulario */
@@ -1392,7 +1392,7 @@ body {
 
 .campo input:focus,
 .campo textarea:focus {
-  border-color: #0077b6;
+  border-color: #00b4d8;
   outline: none;
 }
 
@@ -1401,7 +1401,7 @@ body {
   display: block;
   width: 100%;
   padding: 10px;
-  background-color: #0077b6;
+  background-color: #00b4d8;
   color: #fff;
   font-size: 1rem;
   font-weight: bold;
@@ -1413,7 +1413,7 @@ body {
 }
 
 .boton:hover {
-  background-color: #005f99;
+  background-color: #00b4d8;
 }
 
 /* Adaptación para dispositivos pequeños */
@@ -1466,7 +1466,7 @@ body {
 .formulario-contacto h1 {
   text-align: center;
   margin-bottom: 20px;
-  color: #0077b6;
+  color: #00b4d8;
 }
 
 .campo {
@@ -1492,7 +1492,7 @@ body {
 
 .campo input:focus,
 .campo textarea:focus {
-  border-color: #0077b6;
+  border-color: #00b4d8;
   outline: none;
 }
 
@@ -1501,7 +1501,7 @@ body {
   display: block;
   width: 100%;
   padding: 10px;
-  background-color: #0077b6;
+  background-color: #00b4d8;
   color: #fff;
   font-size: 1rem;
   font-weight: bold;
@@ -1513,7 +1513,7 @@ body {
 }
 
 .boton:hover {
-  background-color: #005f99;
+  background-color: #00b4d8;
 }
 
 /* Mensaje de éxito */
@@ -1530,7 +1530,7 @@ body {
 
 /* Footer */
 footer {
-  background-color: #0077b6;
+  background-color: #00b4d8;
   color: #fff;
   padding: 40px 20px;
   margin-top: 30px;
@@ -1624,4 +1624,3 @@ footer {
   .iconos-redes img:hover {
       transform: scale(1.2);
   }
-  
